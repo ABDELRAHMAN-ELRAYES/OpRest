@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Welcome to Healixa
+    style.
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+      }
+      .container {
+        background: white;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .logo {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #14b8a6;
+        margin-bottom: 10px;
+      }
+      .button {
+        display: inline-block;
+        background: #14b8a6;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 20px 0;
+        font-weight: 500;
+      }
+      .button:hover {
+        background: #0d9488;
+      }
+      .footer {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        font-size: 14px;
+        color: #666;
+      }
+  body
+    .container
+      .header
+        .logo Healixa
+        p Your trusted healthcare platform
+      
+      h1 Welcome to Healixa, #{name}!
+      
+      p We're excited to have you join our healthcare community. Your account has been successfully created and you're now ready to experience personalized healthcare management.
+      
+      .features
+        h3 What you can do with Healixa:
+        ul
+          li Schedule appointments with healthcare providers
+          li Access your medical records securely
+          li Receive personalized health insights
+          li Connect with our network of verified doctors
+          li Track your health metrics and progress
+      
+      p Need help? Our support team is available 24/7 at support@healixa.com
+      
+      .footer
+        p Best regards,
+        p The Healixa Team
+        p This email was sent to #{email}. If you didn't create this account, please contact us immediately.

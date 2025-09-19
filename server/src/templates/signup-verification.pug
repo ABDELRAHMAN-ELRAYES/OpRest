@@ -1,0 +1,124 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Verify Your Email - Healixa
+    style.
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+      }
+      .container {
+        background: white;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .logo {
+        font-size: 4rem;
+        font-weight: bold;
+        color: #14b8a6;
+        margin-bottom: 10px;
+      }
+      .otp-container {
+        background: #f0fdfa;
+        border: 2px solid #14b8a6;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        margin: 25px 0;
+      }
+      .otp-code {
+        font-size: 32px;
+        font-weight: bold;
+        color: #14b8a6;
+        letter-spacing: 8px;
+        font-family: 'Courier New', monospace;
+        margin: 10px 0;
+      }
+      .expiry-notice {
+        background: #fef3c7;
+        border-left: 4px solid #f59e0b;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+      }
+      .expiry-notice p {
+        margin: 0;
+        color: #92400e;
+        font-weight: 500;
+      }
+      .security-tips {
+        background: #f3f4f6;
+        border-radius: 6px;
+        padding: 20px;
+        margin: 25px 0;
+      }
+      .security-tips h4 {
+        margin-top: 0;
+        color: #374151;
+      }
+      .security-tips ul {
+        margin: 10px 0;
+        padding-left: 20px;
+      }
+      .security-tips li {
+        margin: 5px 0;
+        color: #6b7280;
+      }
+      .footer {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        font-size: 14px;
+        color: #666;
+      }
+      .warning {
+        color: #dc2626;
+        font-weight: 500;
+      }
+  body
+    .container
+      .header
+        .logo Healixa
+        p Your trusted healthcare platform
+      
+      h1 Verify Your Email Address
+      
+      p Hi #[strong #{name}],
+      
+      p To complete your registration and secure your Healixa account, please verify your email address using the verification code below:
+      
+      .otp-container
+        p(style="margin: 0; font-size: 16px; color: #374151;") Your Verification Code
+        .otp-code #{otp}
+        p(style="margin: 0; font-size: 14px; color: #6b7280;") Enter this code in the verification screen
+      
+      .expiry-notice
+        p #[strong ⏰ Important:] This verification code will expire in #[strong #{expiresIn} minutes] for your security.
+      
+      p If you didn't request this verification code, please ignore this email or contact our support team immediately.
+      
+      .security-tips
+        h4 🔒 Security Tips:
+        ul
+          li Never share your verification code with anyone
+          li Healixa will never ask for your code via phone or email
+          li If you suspect suspicious activity, contact us immediately
+      
+      p Need help? Our support team is available 24/7 at #[a(href="mailto:support@healixa.com" style="color: #14b8a6;") support@healixa.com]
+      
+      .footer
+        p Best regards,
+        p The Healixa Team
+        p This email was sent to #[strong #{email}]. #[span.warning If you didn't create this account, please contact us immediately.]
