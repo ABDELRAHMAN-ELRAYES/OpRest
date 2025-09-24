@@ -10,7 +10,7 @@ import {
   protect,
   restrictsTo,
 } from "../authentication/authentication.controller";
-import upload from "../../middlewares/upload";
+import upload from "../../middlewares/file-upload";
 
 const UserRouter = Router();
 
