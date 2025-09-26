@@ -87,15 +87,15 @@ const Navbar: React.FC = () => {
             ? "bg-white/98 backdrop-blur-2xl shadow-2xl border-b border-gray-100"
             : "bg-white/95 backdrop-blur-lg"
         }  */}
-          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-18 lg:py-6">
-            <div className="flex justify-between items-center h-20 p-4 ">
+          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-16 lg:py-6">
+            <div className="flex justify-between items-center h-20 p-4 bg-white/30 backdrop-blur-sm rounded-2xl">
               {/* Right Side: Desktop Navigation */}
               <div className="hidden lg:flex items-center space-x-reverse space-x-1">
                 {navItems.map((item, index) => (
                   <div key={index} className="relative group">
                     <a
                       href={item.href}
-                      className="flex items-center space-x-reverse space-x-1 px-5 py-3 rounded-xl text-gray-700 hover:text-orange-600 transition-all duration-300 font-medium group-hover:bg-orange-50/80 relative overflow-hidden"
+                      className="flex items-center space-x-reverse space-x-1 px-5 py-3 rounded-xl text-white hover:text-orange-600 transition-all duration-300 font-medium  relative overflow-hidden"
                       onMouseEnter={() =>
                         item.icon && handleDropdown(item.name)
                       }
@@ -134,11 +134,11 @@ const Navbar: React.FC = () => {
                     isSearchOpen ? "w-80 opacity-100" : "w-12 opacity-90"
                   }`}
                 >
-                  <div className="relative w-full">
+                  <div className="relative w-full bg-white rounded-2xl">
                     <input
                       type="text"
                       placeholder="ابحث في الخدمات..."
-                      className={`w-full bg-gray-100/80 border-0 rounded-2xl py-3 pr-12 pl-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-200 focus:bg-white transition-all duration-300 ${
+                      className={`w-full bg-white border-0 rounded-2xl py-3 pr-12 pl-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-200 transition-all duration-300 ${
                         isSearchOpen
                           ? "opacity-100"
                           : "opacity-0 pointer-events-none"
@@ -146,7 +146,7 @@ const Navbar: React.FC = () => {
                     />
                     <button
                       onClick={toggleSearch}
-                      className="absolute left-3 top-1/2 transform -translate-y-1/2 p-2 text-gray-500 hover:text-orange-600 transition-colors duration-200 outline-0"
+                      className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-orange-600 transition-colors duration-200 outline-0"
                     >
                       <Search className="w-5 h-5" />
                     </button>
@@ -156,19 +156,19 @@ const Navbar: React.FC = () => {
                 {/* Icons Group */}
                 <div className="flex items-center space-x-reverse space-x-2">
                   {/* Cart Icon */}
-                  <button className="relative p-3 rounded-xl text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200 group">
+                  <button className="bg-white relative p-3 rounded-xl text-gray-600 hover:text-orange-600 transition-all duration-200 group">
                     <ShoppingCart className="w-6 h-6" />
                     {/* Cart Badge */}
                     <span className="absolute -top-1 -left-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
                       3
                     </span>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                    {/* <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div> */}
                   </button>
 
                   {/* User Icon */}
-                  <button className="p-3 rounded-xl text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200 group relative">
+                  <button className="bg-white p-3 rounded-xl text-gray-600 hover:text-orange-600 transition-all duration-200 group relative">
                     <User className="w-6 h-6" />
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
+                    {/* <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div> */}
                   </button>
 
                   {/* WhatsApp Icon (Mobile visible only) */}
@@ -186,7 +186,7 @@ const Navbar: React.FC = () => {
               {/* Center: Logo */}
 
               <div className="flex items-center space-x-reverse space-x-4 absolute left-1/2 transform -translate-x-1/2">
-                <img src="/images/logo/white.png" alt="OpeRest" className="w-[13rem]"/>
+                <img src="/images/logo/white.png" alt="OpeRest" className="w-[11rem]"/>
               </div>
 
               {/* Mobile Actions */}

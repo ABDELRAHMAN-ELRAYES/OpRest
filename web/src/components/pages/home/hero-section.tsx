@@ -4,8 +4,8 @@ export default function HomeHeroSection() {
   const { scrollY } = useScroll();
 
   // Assume we have 5 cards → total scroll range needed
-  const totalCards = 5;
-  const scrollRange = 1000; // adjust for sensitivity
+  const totalCards = 2;
+  const scrollRange = 700; // adjust for sensitivity
   const x = useTransform(
     scrollY,
     [0, scrollRange], // the range  of scrolling in y axis   (min -> max)
@@ -20,7 +20,7 @@ export default function HomeHeroSection() {
         {[...Array(totalCards)].map((_, i) => (
           <div
             key={i}
-            className="h-[95vh] w-full  mx-auto flex-shrink-0 rounded-2xl bg-blue-200 text-white flex items-center justify-center text-2xl shadow-lg"
+            className="h-[95vh] w-full  mx-auto flex-shrink-0 rounded-2xl bg-black text-white flex items-center justify-center text-2xl shadow-lg"
           >
             Card {i + 1}
           </div>
